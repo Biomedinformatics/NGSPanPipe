@@ -7,15 +7,18 @@ while (<$m>) {
 chomp;
    
     my @l = split /\t/;
-    open my $p, '<', 'NC_000962.ptt' or die 'Cannot open NC_000962.ptt';
-my $skip = 1;
+ 
+
+    open my $p, '<', $ARGV[0] or die 'Cannot open $file2';
+
     while (<$p>) {
+    next if $. == 1;
+    next if $. == 2;
+    next if $. == 3;
+
        $_=~ s/\r//;
     chomp;
-    next if ($skip eq 1)
-    next if ($skip eq 2)
-    next if ($skip eq 3)
-    $skip++;
+    
         
         my (@range) = split(/\t/, $_);
         my ($fm, $to) = split(/\.\./, $range[0]);
