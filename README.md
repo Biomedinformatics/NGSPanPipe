@@ -13,4 +13,4 @@ NGSPanPipe is platform independent. The only prerequisite is that the user shoul
 
 IMPLEMENTATION:
 
-The single script pipeline (pipeline.pl) integrates multiple perl scripts. Users have to download the zipped file from clone or download tab and execute pipeline.pl making changes according to their requirement as suggested in the script pipeline.pl. 
+The single script pipeline (pipeline.pl) integrates multiple perl scripts. Users have to download the zipped file from clone or download tab and execute pipeline.pl making changes according to their requirement as suggested in the script pipeline.pl. THis generates output panmatrix.txt in binary form and count.txt gives how much of the protein is covered by the reads.
