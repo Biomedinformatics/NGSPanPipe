@@ -4,10 +4,10 @@ while ($seq = <FH>)
 @seq = split (/\t/, $seq);
 
 $size = @seq;
+chomp @seq[$size-2];
+print @seq[0]."\t".@seq[$size-2];
 
-print @seq[0]."\t";
-
-for ($i=1; $i<=$size; $i++)
+for ($i=1; $i<=$size-3; $i++)
 {$j=$i+1;
 @p = split (/\:/, @seq[$i]);
 @p1 = split (/\:/, @seq[$j]);
