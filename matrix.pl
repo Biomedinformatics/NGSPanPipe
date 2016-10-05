@@ -9,13 +9,14 @@ $file3 = $file3."\t".$file2;
 @file4 = split /\t/, $file3;
 $size = @file4;
 
-open (FH, "p.txt");
+open (FH, "p1.txt");
 while ($seq = <FH>)
 {
 @seq = split /\t/, $seq;
-
+$size1 = @seq;
 for ($i=1; $i<=$size+1; $i++){
-print @seq[0]."\t";
+chomp @seq[$size1-1];
+print @seq[0]."\t".@seq[$size1-1]."\t";
  @seq1 = split /\./, @seq[$i];
 $seq2= @seq1[0];
 chomp $seq2;
@@ -30,6 +31,8 @@ print "\n";
 }
 
 }
+
+
 
 
 
