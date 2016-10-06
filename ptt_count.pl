@@ -3,7 +3,7 @@ use warnings;
 
 my (%covered);
 
-open my $m, '<', 'ptt.txt' or die 'Cannot open map_ptt.txt';
+open my $m, '<', 'ptt.txt' or die 'Cannot open ptt.txt';
 while (my $seq = <$m>) {
     chomp $seq;
 
@@ -16,17 +16,22 @@ my $s = $size - 1;
     my $end = $start + $s;
     $end = $to if $end > $to;
     for(my $i=$start;$i<=$end;$i++) {
-        $covered{$range}{$i} = 1
+        $covered{$range}{$i} = 1;
+        
     }
 }
+print "Range"."\t"."Base covered"."\t"."Total base"."\n";
+
 
 for my $range (sort keys %covered) {
+
  my ($fm1,$to1) = split /\.\./,$range;
 my $diff = $to1-$fm1;
     printf " %s \t %d",$range,scalar keys %{$covered{$range}};
 print "\t".$diff."\n";
 
-}
+} 
+
 close $m;
 
 
