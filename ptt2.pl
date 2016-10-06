@@ -1,4 +1,15 @@
-open (FH, "p1.txt");
+opendir(DIR, ".");
+@files = grep(/\.fq$/,readdir(DIR));
+closedir(DIR);
+
+foreach $file (sort @files) {
+@file1 = split /\./, $file;
+$file2 = $file1[0];
+chomp $file2;
+$file3 = $file3."\t".$file2;
+}
+print "Protein name"."\t"."Position".$file3."\n";
+open (FH, "final.txt");
 while ($seq = <FH>)
 {
 @seq = split (/\t/, $seq);
@@ -11,7 +22,7 @@ while ($seq1 = <FH1>)
 $pos1 = @seq1[1];
 if ($pos eq $pos1)
 {chomp @seq1[2]; chomp $seq;
-print $seq."\t".@seq1[2]."\n";
+print @seq1[2]."\t".$seq."\n";
 last;}
 }
 
