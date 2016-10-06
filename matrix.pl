@@ -1,37 +1,36 @@
-#!/usr/bin/perl 
+opendir(DIR, ".");
+@files = grep(/\.fq$/,readdir(DIR));
+closedir(DIR);
 
- 
-my %k;
+foreach $file (@files) {
+@file1 = split /\./, $file;
+$file2 = $file1[0];
+$file3 = $file3."\t".$file2;
+}
 
+@file4 = split /\t/, $file3;
+$size = @file4;
 
-while (my $line=<>) {
-    
-    my @F=split(/\t/,$line);
-$size= @F;
-for ($i=1;$i<=$size;$i++)
+open (FH, "p.txt");
+while ($seq = <FH>)
 {
-
-   
-    $k{$F[0]}{$F[$i]}=1;
-    $k{$F[0]}{$F[1]}=1;
+@seq = split /\t/, $seq;
+$size1 = @seq;
+for ($i=1; $i<=$size+1; $i++){
+chomp @seq[$size1-1];
+print @seq[0]."\t";
+ @seq1 = split /\./, @seq[$i];
+$seq2= @seq1[0];
+chomp $seq2;
+for ($j=1; $j<=$size-1; $j++){
+if (@file4[$j] eq "$seq2"){
+print @file4[$j].":1"."\t";}
+else{
+print @file4[$j].":0"."\t";}
 }
+
+print "\n";
 }
-
-
-my @names=(sort keys(%k));
-
-
-
-foreach my $name (@names) {
-chomp $name;
-    print "$name";
-    foreach my $value ( (sort keys(%{$k{$name}})) ){
-chomp $value;
-      print $value."\t";
-
-    } 
-  print "\n"; 
-    
 
 }
 
