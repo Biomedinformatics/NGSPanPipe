@@ -24,7 +24,7 @@ my @names=(sort keys(%k));
 
 foreach my $name (@names) {
 chomp $name;
-    print "$name\t";
+    print "$name";
     foreach my $value ( (sort keys(%{$k{$name}})) ){
 chomp $value;
       print $value."\t";
