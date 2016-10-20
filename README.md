@@ -10,7 +10,7 @@ matrix file depicting presence/absence of genes in binary format.
 
 PREREQUISITE:
 
-NGSPanPipe is platform independent. The only prerequisite is that the user should have perl installed in his system.
+NGSPanPipe is platform independent. The only prerequisite is that the user should have perl and BWA (Burrows-Wheeler Aligner) tool installed in his system.
 
 IMPLEMENTATION:
 
