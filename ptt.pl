@@ -9,7 +9,7 @@ my @seq = split(/\|/, $l[0]);
 my $name = $seq[3];
     open my $p, '<', 'NC_000962.ptt' or die 'Cannot open NC_000962.ptt';
     while (<$p>) {
-        next if /^Location/;
+        next unless $. > 3;
 
         chomp;
         my (@range) = split(/\t/, $_);
