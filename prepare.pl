@@ -14,7 +14,7 @@ sub process_file {
     open my $fa, '>', $output_file;
 
     while (my $line = <$fh>) {
-
+$line =~ s/\@/\@\|\|\|$file\|/g;
 $line =~ s/\@/\n\@/g;
 
    print $fa $line;
