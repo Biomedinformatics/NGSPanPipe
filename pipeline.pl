@@ -1,11 +1,19 @@
 #!/usr/bin/perl
 
-system "perl prepare.pl *.fq";   # input file should be reads in fastq format.
+print "Enter the input files"."\n";
+my $firstfile =<STDIN>;
+print "Enter the filtering value (copy of reads in all strains)"."\n";
+my $secondfile =<STDIN>;
+print "Enter the reference file"."\n";
+my $thirdfile =<STDIN>;
+print "Enter the ptt file"."\n";
+my $fourthfile =<STDIN>;
+system "perl prepare.pl $firstfile";
 system "perl count1.pl *.fq.out";
 system "perl comp.pl *.fq.out.out1 >compare.txt";
-system "perl collapse1.pl 2"; # 2 can be replaced by the filter cutoff user wants to specify i.e.total number of occurrence of reads in all strains....we put 2 in case of simulated reads.
-system "perl align2.pl"; # open align.pl and change the reference file name according to the genome of interest and the reference file should be present in the folder.
-system "perl ptt.pl >ptt.txt"; # the reference ptt file name has to be changed as user's requirement and the ptt file must be present in the folder.
+system "perl collapse1.pl $secondfile";
+system "perl align2.pl $thirdfile"; 
+system "perl ptt.pl $fourthfile";
 system "perl ptt_count.pl >count.txt"; #output file giving the proteins covered by sequenced reads with their location in the genome.
 system "perl ptt1.pl ptt.txt >p.txt";
 system "perl matrix.pl >matrix.txt";
