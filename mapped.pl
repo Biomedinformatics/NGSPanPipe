@@ -3,7 +3,7 @@ while ($seq = <FH1>)
 {chomp $seq;
 
 open (FA, ">>map.txt");
-open (FA1, ">>unmap.txt");
+open (FA1, ">>novel.txt");
 open (FH, "$seq");
 while ($seq1=<FH>)
 {
