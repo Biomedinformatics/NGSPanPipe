@@ -11,5 +11,5 @@ system "perl mapped.pl";
 system "perl ptt1-nt.pl map.txt >ptt.txt";
 system "perl matrix-nt.pl $firstfile >matrix-nt.txt";
 system "perl matrix1-nt.pl matrix-nt.txt >matrix1-nt.txt";
-system "perl matrix_final-nt.pl $firstfile >matrix_final-nt.txt";
+system "perl matrix_final-nt.pl $firstfile >ntmatrix.txt";
 
