@@ -1,6 +1,6 @@
-opendir(DIR, ".");
-@files = grep(/\.fq$/,readdir(DIR));
-closedir(DIR);
+
+@files = @ARGV;
+
 
 foreach $file (sort @files) {
 @file1 = split /\./, $file;
@@ -10,7 +10,7 @@ $file3 = $file3."\t".$file2;
 
 print "gene".$file3."\n";
 
-open (FH, "matrix1.txt");
+open (FH, "matrix1-nt.txt");
 while ($seq = <FH>)
 { 
 @seq = split (/\t/, $seq);
