@@ -1,6 +1,5 @@
-opendir(DIR, ".");
-@files = grep(/\.fq$/,readdir(DIR));
-closedir(DIR);
+@files = @ARGV;
+
 
 foreach $file (@files) {
 @file1 = split /\./, $file;
@@ -33,6 +32,7 @@ print "\n";
 }
 
 }
+
 
 
 
