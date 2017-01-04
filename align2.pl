@@ -1,11 +1,12 @@
 #!/usr/bin/perl
 
+@files = @ARGV;
+$files = shift;
+system "bwa index ". $files;
+system "bwa aln ".$files." collapse.fastq > collapse.sai";
 
-system "bwa index NC_000962.fna";
-system "bwa aln NC_000962.fna collapse.fastq > collapse.sai";
 
-
-system "bwa samse NC_000962.fna collapse.sai collapse.fastq > collapse.sam"; 
+system "bwa samse ". $files." collapse.sai collapse.fastq > collapse.sam"; 
 
 
 open (FA, ">>mapped.txt");
@@ -21,8 +22,7 @@ else
 {print FA1 $seq1;}
 
   }
-
-
+file;
 
 
 
