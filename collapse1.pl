@@ -1,3 +1,5 @@
+@files = @ARGV;
+$files = shift;
 open (FH, "compare.txt");
 open (FA, ">>collapse.fastq");
 $qual = shift;
@@ -9,9 +11,8 @@ while ($seq=<FH>)
 $se = @se[1];
 @s = split (/\t/, @seq1[0]);
 $s = @s[0];
-if ($se >= 2)
+if ($se >= $files)
 {print FA $s."\n";}
 
 
 }
-
