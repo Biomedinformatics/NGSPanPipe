@@ -12,7 +12,7 @@ genes. This script will also give a novel.txt file with reads that can be subjec
 
 PREREQUISITE:
 
-NGSPanPipe is platform independent. The only prerequisite is that the user should have perl and BWA (Burrows-Wheeler Aligner) tool installed in his system. If the used desires to get the genes acquired by the test genome then he need to download NCBI nt database and put it in the same folder where the script is.
+NGSPanPipe is platform independent. The only prerequisite is that the user should have perl and BWA (Burrows-Wheeler Aligner) tool installed in his system. If the used desires to get the genes acquired by the test genome then he need to download NCBI nt database, unzip it and put it in the same folder where the script is.
 
 IMPLEMENTATION:
 
