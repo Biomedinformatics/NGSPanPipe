@@ -1,7 +1,6 @@
 # NGSPanPipe
 
 pipeline.pl -- A perl script for reference genome panmatrix.
-ntpipe.pl -- A perl script for acquired gene panmatrix.
 
 ABSTRACT:
 
@@ -16,4 +15,4 @@ NGSPanPipe is platform independent. The only prerequisite is that the user shoul
 
 IMPLEMENTATION:
 
-The single script pipeline (pipeline.pl) integrates multiple perl scripts. Users have to download the zipped file from clone or download tab and execute pipeline.pl. This generates output panmatrix.txt in binary format and count.txt gives pangenome coverage.
+The single script pipeline (pipeline.pl) integrates multiple perl scripts. Users have to download the zipped file from clone or download tab and execute pipeline.pl. This generates output panmatrix.txt in binary format and count.txt gives pangenome coverage. two additional files are also obtained as output: ntmatrix.txt and novel.txt containing panmatrix of acquired genes absent from reference strain and potential novel reads respectively.
