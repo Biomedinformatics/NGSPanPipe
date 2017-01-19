@@ -20,7 +20,7 @@ my $s = $size - 1;
         
     }
 }
-print "Range"."\t"."Base covered"."\t"."Total base"."\n";
+print "Genome location"."\t"."Bases covered by reads"."\t"."Total bases in respective protein"."\n";
 
 
 for my $range (sort keys %covered) {
