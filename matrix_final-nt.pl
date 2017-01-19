@@ -8,7 +8,7 @@ $file2 = $file1[0];
 $file3 = $file3."\t".$file2;
 }
 
-print "gene".$file3."\n";
+
 
 open (FH, "matrix1-nt.txt");
 while ($seq = <FH>)
