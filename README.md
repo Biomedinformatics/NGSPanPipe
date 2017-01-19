@@ -6,8 +6,7 @@ ABSTRACT:
 
 We report here a one step pipeline to perform pan genome construction. This pipeline employing a novel approach 
 uses raw reads as input, collapsing them and generating contigs so as to give maximum genome coverage and a 
-matrix file depicting presence/absence of genes in binary format. The user will also be provided with the panmatrix of acquired 
-genes. This script will also give a novel.txt file with reads that can be subjected to denovo assembly and analyzed as novel genes which are neither present in reference genome nor acquired by any other bacterial genome.
+matrix file depicting presence/absence of genes present in reference genome and also acquired genes in binary format. This script will also give a novel.txt file with reads that can be subjected to denovo assembly and analyzed as novel genes which are neither present in reference genome nor acquired by any other bacterial genome.
 
 PREREQUISITE:
 
