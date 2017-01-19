@@ -1,8 +1,10 @@
 #!/usr/bin/perl
 
+#!/usr/bin/perl
+
 print "Enter the input files"."\n";
 my $firstfile =<STDIN>;
-print "Enter the number"."\n";
+print "Enter the number for filter of occurrence of read in each strain"."\n";
 my $secondfile =<STDIN>;
 print "Enter the reference file"."\n";
 my $thirdfile =<STDIN>;
@@ -30,7 +32,8 @@ system "perl ext-read.pl";
 system "perl align-nt.pl";
 system "perl sam.pl";
 system "perl mapped.pl";
-system "perl ptt1-nt.pl map.txt >ptt.txt";
+system "perl ref.pl";
+system "perl ptt1-nt.pl ref-nt.txt >ptt-nt.txt";
 system "perl matrix-nt.pl $fifthfile >matrix-nt.txt";
 system "perl matrix1-nt.pl matrix-nt.txt >matrix1-nt.txt";
 system "perl matrix_final-nt.pl $fifthfile >ntmatrix.txt";
