@@ -25,7 +25,7 @@ system "perl ptt1.pl ptt.txt >p.txt";
 system "perl matrix.pl $fifthfile >matrix.txt";
 system "perl matrix1.pl matrix.txt >matrix1.txt";
 system "perl matrix_final.pl >final.txt"; 
-system "perl ptt2.pl >refmatrix.txt"; #presence/absence of genes in specific strains in binary format.
+system "perl ptt2.pl $fifthfile >refmatrix.txt"; #presence/absence of genes in specific strains in binary format.
 system "perl split.pl $sixthfile";
 system "perl index.pl";
 system "perl ext-read.pl";
