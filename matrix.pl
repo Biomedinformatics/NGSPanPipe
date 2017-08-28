@@ -1,12 +1,11 @@
-@files = @ARGV;
-
+my @files= @ARGV;
 
 foreach $file (@files) {
 @file1 = split /\./, $file;
 $file2 = $file1[0];
 $file3 = $file3."\t".$file2;
 }
-
+print $file3;
 @file4 = split /\t/, $file3;
 $size = @file4;
 
@@ -32,7 +31,5 @@ print "\n";
 }
 
 }
-
-
 
 
