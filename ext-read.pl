@@ -1,4 +1,4 @@
-open (FH, "unmapped.txt");
+open (FH, "mapped.txt");
 open (FA, ">>mapped.fq");
 while ($seq = <FH>)
 
