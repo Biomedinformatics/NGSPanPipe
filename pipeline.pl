@@ -1,10 +1,6 @@
-#!/usr/bin/perl
-
-#!/usr/bin/perl
-
 print "Enter the input files"."\n";
 my $firstfile =<STDIN>;
-print "Enter the number for filter of occurrence of read in each strain"."\n";
+print "Enter the number"."\n";
 my $secondfile =<STDIN>;
 print "Enter the reference file"."\n";
 my $thirdfile =<STDIN>;
@@ -15,8 +11,9 @@ chomp $fifthfile;
 print "Enter the 'nt' database name"."\n";
 my $sixthfile =<STDIN>;
 system "perl prepare.pl $firstfile";
-system "perl count1.pl *.fq.out";
-system "perl comp.pl *.fq.out.out1 >compare.txt";
+system "perl prepare1.pl $firstfile";
+system "perl count1.pl *.out";
+system "perl comp.pl *.out.out1 >compare.txt";
 system "perl collapse1.pl $secondfile";
 system "perl align2.pl $thirdfile"; 
 system "perl ptt.pl $fourthfile";
@@ -25,7 +22,7 @@ system "perl ptt1.pl ptt.txt >p.txt";
 system "perl matrix.pl $fifthfile >matrix.txt";
 system "perl matrix1.pl matrix.txt >matrix1.txt";
 system "perl matrix_final.pl >final.txt"; 
-system "perl ptt2.pl $fifthfile >refmatrix.txt"; #presence/absence of genes in specific strains in binary format.
+system "perl ptt2.pl >refmatrix.txt"; #presence/absence of genes in specific strains in binary format.
 system "perl split.pl $sixthfile";
 system "perl index.pl";
 system "perl ext-read.pl";
@@ -38,3 +35,4 @@ system "perl matrix-nt.pl $fifthfile >matrix-nt.txt";
 system "perl matrix1-nt.pl matrix-nt.txt >matrix1-nt.txt";
 system "perl matrix_final-nt.pl $fifthfile >ntmatrix.txt";
 system "cat refmatrix.txt ntmatrix.txt >panmatrix.txt";
+
