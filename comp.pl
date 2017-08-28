@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 use strict;
-use warnings;
+
 no warnings qw( numeric );
 my %seen;
 
