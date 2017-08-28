@@ -1,5 +1,5 @@
-    use strict;
-    use warnings;
+     use strict;
+    
 
 my @files= @ARGV;
    for my $input_file (@files) {
