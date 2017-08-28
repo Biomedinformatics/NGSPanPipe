@@ -1,6 +1,8 @@
-my @files= @ARGV;
+opendir(DIR, ".");
+@files = grep(/\.fq$/,readdir(DIR));
+closedir(DIR);
 
-foreach $file (@files) {
+foreach $file (sort @files) {
 @file1 = split /\./, $file;
 $file2 = $file1[0];
 chomp $file2;
