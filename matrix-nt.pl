@@ -9,7 +9,7 @@ $file3 = $file3."\t".$file2;
 @file4 = split /\t/, $file3;
 $size = @file4;
 
-open (FH, "ptt-nt.txt");
+open (FH, "ptt.txt");
 while ($seq = <FH>)
 {
 @seq = split /\t/, $seq;
