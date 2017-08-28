@@ -9,7 +9,7 @@ while (<$m>) {
     my @l = split /\t/;
 my @seq = split(/\|/, $l[0]);
 my $name = $seq[3];
-    open my $p, '<', $files or die 'Cannot open .ptt';
+    open my $p, '<', $files or die 'Cannot open NC_000962.ptt';
     while (<$p>) {
         next unless $. > 3;
 
