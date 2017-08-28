@@ -15,5 +15,3 @@ system "bwa samse ".$seq." ".$seq.".sai mapped.fq >".$seq.".sam";
 
 
 
-
-
