@@ -8,7 +8,7 @@ We report here a one step pipeline to perform pan genome construction. This pipe
 
 PREREQUISITE:
 
-NGSPanPipe is platform independent. The only prerequisite is that the user should have perl and BWA (Burrows-Wheeler Aligner) tool installed in his system. To get the genes acquired by the test genome user needs to download NCBI nt database, unzip it and put it in the same folder where the script is.
+NGSPanPipe is platform independent. The only prerequisite is that the user should have perl and BWA (Burrows-Wheeler Aligner) tool installed in his system. The reference file and ptt file for desired organism has to be placed in the script folder. The user also needs to download NCBI nt database, unzip it and put it in the same folder where the script is to get the genes acquired by the test genome.
 
 IMPLEMENTATION:
 
