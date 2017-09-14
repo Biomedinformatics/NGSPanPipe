@@ -1,6 +1,6 @@
 print "Enter the input files"."\n";
 my $firstfile =<STDIN>;
-print "Enter the number"."\n";
+print "Enter the number of strains a read should be present to be considered as real read"."\n";
 my $secondfile =<STDIN>;
 print "Enter the reference file"."\n";
 my $thirdfile =<STDIN>;
